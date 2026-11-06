@@ -1,0 +1,37 @@
+/* Register.css */
+.otp-verification {
+  text-align: center;
+  padding: 20px;
+}
+
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.otp-input {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.otp-input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+.otp-verification .btn {
+  margin: 10px;
+  padding: 12px 24px;
+}
+
+.otp-verification .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

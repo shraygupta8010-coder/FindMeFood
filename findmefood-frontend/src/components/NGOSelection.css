@@ -1,0 +1,498 @@
+/* NGO Selection Styles */
+.ngo-selection-container {
+  margin: 1.5rem 0;
+}
+
+/* Loading State */
+.ngo-selection-loading {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 2px dashed #e2e8f0;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e2e8f0;
+  border-top: 3px solid #e97328;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+.loading-dots {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 1rem;
+}
+
+.loading-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #e97328;
+  animation: bounce 1.4s infinite ease-in-out;
+}
+
+.loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+.loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+
+/* No NGOs Found */
+.no-ngos-found {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #fef2f2;
+  border-radius: 12px;
+  border: 2px dashed #fecaca;
+}
+
+.no-ngos-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.no-ngos-found h3 {
+  color: #dc2626;
+  margin-bottom: 1rem;
+}
+
+.suggestions {
+  text-align: left;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  border-left: 4px solid #e97328;
+}
+
+.suggestions ul {
+  margin: 0.5rem 0 0 1rem;
+  color: #6b7280;
+}
+
+.suggestions li {
+  margin-bottom: 0.25rem;
+}
+
+/* Header Stats */
+.ngo-selection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+.stats-card {
+  display: flex;
+  gap: 2rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e97328;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.auto-assign-section {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.auto-assign-btn {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+}
+
+.auto-assign-hint {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+  max-width: 200px;
+}
+
+/* NGO List */
+.ngo-list h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.ngo-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* NGO Card */
+.ngo-card {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ngo-card:hover {
+  border-color: #e97328;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(233, 115, 40, 0.15);
+}
+
+.ngo-card.selected {
+  border-color: #10b981;
+  background: #f0fdf4;
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.15);
+}
+
+.ngo-card.selected::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #10b981;
+}
+
+/* NGO Header */
+.ngo-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ngo-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e97328, #f59e0b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.ngo-info {
+  flex: 1;
+}
+
+.ngo-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 0.5rem 0;
+}
+
+.ngo-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.ngo-badge {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.closest-badge {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.verification-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.verification-badge.verified {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.verification-badge.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* NGO Details */
+.ngo-details {
+  margin-bottom: 1rem;
+}
+
+.ngo-description {
+  color: #4b5563;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.ngo-stats {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stat-icon {
+  font-size: 1rem;
+}
+
+.stat-value {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.stat-label {
+  color: #6b7280;
+  font-size: 0.8rem;
+}
+
+.ngo-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 3px solid #e97328;
+}
+
+.address-icon {
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.address-text {
+  font-size: 0.85rem;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+/* Selection Indicator */
+.selection-indicator {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.selected-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #10b981;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.select-prompt {
+  color: #6b7280;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* Selection Summary */
+.selection-summary {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.summary-header h4 {
+  margin: 0;
+  color: #065f46;
+}
+
+.btn-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.selected-ngo-preview {
+  color: #065f46;
+  font-size: 0.95rem;
+}
+
+/* Help Section */
+.ngo-selection-help {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #fffbeb;
+  border-radius: 12px;
+  border-left: 4px solid #f59e0b;
+  margin-top: 1.5rem;
+}
+
+.help-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.help-content {
+  flex: 1;
+}
+
+.help-content strong {
+  color: #92400e;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.help-content ul {
+  margin: 0.5rem 0 0 1rem;
+  color: #92400e;
+  font-size: 0.9rem;
+}
+
+.help-content li {
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ngo-selection-header {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .stats-card {
+    width: 100%;
+    justify-content: space-around;
+  }
+  
+  .auto-assign-section {
+    width: 100%;
+  }
+  
+  .auto-assign-btn {
+    width: 100%;
+  }
+  
+  .ngo-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .ngo-badge {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+  
+  .ngo-stats {
+    gap: 1rem;
+  }
+  
+  .stat-item {
+    flex: 1;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ngo-card {
+    padding: 1rem;
+  }
+  
+  .stats-card {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.25rem;
+  }
+  
+  .help-content ul {
+    margin-left: 0.5rem;
+  }
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.ngo-card {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

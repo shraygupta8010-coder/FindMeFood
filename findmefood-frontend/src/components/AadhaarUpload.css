@@ -1,0 +1,150 @@
+/* src/components/AadhaarUpload.css */
+.aadhaar-upload {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+}
+
+.upload-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.upload-header h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.upload-header p {
+  color: #666;
+  margin: 0;
+}
+
+.upload-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.upload-section h4 {
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.upload-area {
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #fafafa;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-area:hover {
+  border-color: #4CAF50;
+  background: #f8fff8;
+}
+
+.upload-area.has-image {
+  border-color: #4CAF50;
+  background: #f8fff8;
+  padding: 0.5rem;
+}
+
+.upload-placeholder {
+  color: #666;
+}
+
+.upload-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.upload-text small {
+  color: #888;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.image-preview {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image-preview img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.remove-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #ff4757;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-btn:hover {
+  background: #ff3742;
+}
+
+.security-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #e3f2fd;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  border-left: 4px solid #2196F3;
+}
+
+.note-icon {
+  font-size: 1.2rem;
+}
+
+.note-text {
+  flex: 1;
+  color: #1565C0;
+}
+
+.note-text strong {
+  color: #0D47A1;
+}
+
+.btn-full {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .upload-sections {
+    grid-template-columns: 1fr;
+  }
+  
+  .aadhaar-upload {
+    padding: 1rem;
+  }
+}
